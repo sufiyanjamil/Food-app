@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "416826782453",
+    "project_id": "foodapp-e6864",
+    "storage_bucket": "foodapp-e6864.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416826782453:android:28a40ca854b6be369bcbbc",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416826782453-h0jiml12b2rpb383qi2jassvlesmfha3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBztANOT7Hg3u1JotaqSc-EDmzKlIzEKV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416826782453-h0jiml12b2rpb383qi2jassvlesmfha3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416826782453:android:5504731c3ac5a8219bcbbc",
+        "android_client_info": {
+          "package_name": "com.example.foodapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416826782453-vpeogqp8rjv5845t9kqcreb7sosp2bo9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foodapp",
+            "certificate_hash": "8124ada8a87778bd6ce8291aa6389b689aae0cfc"
+          }
+        },
+        {
+          "client_id": "416826782453-h0jiml12b2rpb383qi2jassvlesmfha3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBztANOT7Hg3u1JotaqSc-EDmzKlIzEKV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416826782453-h0jiml12b2rpb383qi2jassvlesmfha3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
