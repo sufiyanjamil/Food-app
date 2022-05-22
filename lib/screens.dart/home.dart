@@ -2,129 +2,170 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:foodapp/screens.dart/drawerside.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:foodapp/screens.dart/singal_product.dart';
 
 // ignore: camel_case_types
 class home_page extends StatelessWidget {
   const home_page({Key? key}) : super(key: key);
 
-  Widget singalProduct() {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 6),
-      height: 230,
-      width: 160,
-      decoration: BoxDecoration(
-        color: Color(0xffd9dad9),
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            flex: 2,
-            child: Image(
-              image: NetworkImage(
-                  'http://assets.stickpng.com/images/58bf1e2ae443f41d77c734ab.png'),
-            ),
+  Widget _buildHerbsProduct() {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 3),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              "Herbs Seasonings".text.size(18).gray900.make(),
+              "View all".text.size(15).gray600.make(),
+            ],
           ),
-          Expanded(
-            child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  "Fresh Basil".text.black.bold.make(),
-                  "50\$/ 50 Gram".text.gray400.bold.make(),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 4.0),
-                    child: Row(
-                      children: [
-                        Expanded(
-                            child: Container(
-                          padding: EdgeInsets.only(left: 4),
-                          height: 30,
-                          width: 60,
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Vx.black,
-                              ),
-                              borderRadius: BorderRadius.circular(8)),
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: '50 Gram '.text.size(5).make(),
-                              ),
-                              Center(
-                                child: Icon(
-                                  Icons.arrow_drop_down,
-                                  size: 15,
-                                  color: Vx.yellow400,
-                                ),
-                              ),
-                            ],
-                          ),
-                        )),
-                        SizedBox(
-                          width: 6,
-                        ),
-                        Expanded(
-                          child: Container(
-                            padding: EdgeInsets.only(left: 3),
-                            height: 30,
-                            width: 40,
-                            decoration: BoxDecoration(
-                                border: Border.all(color: Vx.gray400),
-                                borderRadius: BorderRadius.circular(8)),
-                            child: Row(
-                              children: [
-                                Expanded(
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.remove,
-                                        size: 18,
-                                        color: Color(0xffd0b84c),
-                                      ),
-                                      "1"
-                                          .text
-                                          .color(
-                                            Color(0xffd0b84c),
-                                          )
-                                          .make(),
-                                      Icon(Icons.add,
-                                          size: 18, color: Color(0xffd0b84c)),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+        ),
+        SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              Singalproducts(
+                productImage:
+                    'https://www.qisofreshtohome.com/wp-content/uploads/2020/01/Basil.jpg',
+                productName: 'Fresh Basil',
+                onTap: () {},
+                productPrice: '50\$/50 Gram',
               ),
-            ),
+              Singalproducts(
+                productImage:
+                    'https://www.zaroontrading.com/wp-content/uploads/2020/10/atyrpYQoxdoTzmEgu8HMWE.jpg',
+                productName: 'Fresh Spanich',
+                onTap: () {},
+                productPrice: '49\$/50 Gram',
+              ),
+              Singalproducts(
+                productImage:
+                    'https://d2t3trus7wwxyy.cloudfront.net/catalog/product/8/0/80561869_fb_mint.jpg',
+                productName: 'Fresh mint',
+                onTap: () {},
+                productPrice: '40\$/50 Gram',
+              ),
+              Singalproducts(
+                productImage:
+                    'https://5.imimg.com/data5/JO/KO/MY-26989188/coriander-leaf-500x500.jpg',
+                productName: 'Fresh Coriander',
+                onTap: () {},
+                productPrice: '40\$/50 Gram',
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 
-  Widget listTile({required IconData icon, required String title}) {
-    return ListTile(
-      leading: Icon(
-        icon,
-        size: 32,
-        color: Vx.black,
-      ),
-      title: Text(
-        title,
-        style: TextStyle(color: Vx.black),
-      ),
+  Widget _buildFreshFruits() {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 3),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              "Fresh Fruits".text.size(18).gray900.make(),
+              "View all".text.size(15).gray600.make(),
+            ],
+          ),
+        ),
+        SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              Singalproducts(
+                productImage:
+                    'https://media.istockphoto.com/photos/banana-bunch-picture-id173242750?k=20&m=173242750&s=612x612&w=0&h=dgXrAP6otDeY5h6fhy-SRmW-2dFOCKx1_hNS1lLWF7Y=',
+                productName: 'Fresh Banana',
+                onTap: () {},
+                productPrice: '50\$/50 Gram',
+              ),
+              Singalproducts(
+                productImage:
+                    'https://media.istockphoto.com/photos/red-apple-picture-id495878092?b=1&k=20&m=495878092&s=170667a&w=0&h=bJgILGFxOka0ymPlgilH8qaRxFhKole_M6IiYs6RyGM=',
+                productName: 'Fresh Apple',
+                onTap: () {},
+                productPrice: '49\$/50 Gram',
+              ),
+              Singalproducts(
+                productImage:
+                    'https://sc04.alicdn.com/kf/H219ded6addd2459795243883ec688273I.jpg',
+                productName: 'Fresh Mango',
+                onTap: () {},
+                productPrice: '40\$/50 Gram',
+              ),
+              Singalproducts(
+                productImage:
+                    'https://panzers.co.uk/wp-content/uploads/2021/05/666.jpg',
+                productName: 'Fresh WaterMelon',
+                onTap: () {},
+                productPrice: '40\$/50 Gram',
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildRootVegetables() {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 3),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              "Root Vegetables".text.size(18).gray900.make(),
+              "View all".text.size(15).gray600.make(),
+            ],
+          ),
+        ),
+        SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              Singalproducts(
+                productImage:
+                    'https://www.aywadeal.com/wp-content/uploads/2019/03/White-Radish.jpg',
+                productName: 'White Radish',
+                onTap: () {},
+                productPrice: '50\$/50 Gram',
+              ),
+              Singalproducts(
+                productImage:
+                    'https://static.onecms.io/wp-content/uploads/sites/44/2020/07/23/chives-vs-green-onions.jpg',
+                productName: 'Green Onion',
+                onTap: () {},
+                productPrice: '49\$/50 Gram',
+              ),
+              Singalproducts(
+                productImage:
+                    'https://www.westend61.de/images/0000103819pw/fennel-on-white-background-MAEF003173.jpg',
+                productName: 'Funnel',
+                onTap: () {},
+                productPrice: '40\$/50 Gram',
+              ),
+              Singalproducts(
+                productImage:
+                    'https://cdn.shopify.com/s/files/1/0263/3701/7946/products/green-garlic.jpg?v=1589056226',
+                productName: 'Green Garlic',
+                onTap: () {},
+                productPrice: '40\$/50 Gram',
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 
@@ -132,113 +173,14 @@ class home_page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xfffcbcbcb),
-      drawer: Drawer(
-        child: Container(
-          color: Color(0xffd1ad17),
-          child: ListView(
-            children: [
-              DrawerHeader(
-                child: Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 43,
-                      backgroundColor: Color(0xfffcbcbcb),
-                      child: CircleAvatar(
-                        radius: 40,
-                        backgroundColor: Vx.red600,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        "Welcome Guest".text.size(18).bold.make(),
-                        SizedBox(
-                          height: 7,
-                        ),
-                        Container(
-                          height: 35,
-                          padding: EdgeInsets.symmetric(vertical: 2),
-                          child: SizedBox(
-                            width: 90,
-                            child: OutlinedButton(
-                              onPressed: () {},
-                              child: "Login".text.bold.black.make(),
-                              style: OutlinedButton.styleFrom(
-                                shape: StadiumBorder(),
-                                side: BorderSide(width: 2, color: Colors.black),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              listTile(
-                icon: Icons.home_outlined,
-                title: "Home",
-              ),
-              listTile(
-                icon: CupertinoIcons.cart,
-                title: "Review Cart",
-              ),
-              listTile(
-                icon: CupertinoIcons.person,
-                title: "My Profile",
-              ),
-              listTile(
-                icon: CupertinoIcons.bell,
-                title: "Notification",
-              ),
-              listTile(
-                icon: CupertinoIcons.star,
-                title: "Rate & Review",
-              ),
-              listTile(
-                icon: CupertinoIcons.heart,
-                title: "Wishlist",
-              ),
-              listTile(
-                icon: CupertinoIcons.doc,
-                title: "Raise a Complaint",
-              ),
-              listTile(
-                icon: Icons.message_outlined,
-                title: "FAQs",
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 13),
-                height: 350,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    "Contact Support".text.black.bold.make(),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    "Call us:    +923152502738".text.black.make(),
-                    SizedBox(
-                      height: 4,
-                    ),
-                    "Mail us:    hello@retry.com".text.black.make(),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      drawer: Drawerside(),
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.black),
         backgroundColor: Color(0xffd6b738),
         title: 'Home'.text.black.make(),
 
-        // ignore: prefer_const_literals_to_create_immutables
-        actions: [
+        // ignore: pref er_const_literals_to_create_immutables
+        actions: const [
           // ignore: prefer_const_literals_to_create_immutables
           CircleAvatar(
             radius: 17,
@@ -263,6 +205,7 @@ class home_page extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         child: ListView(
+          physics: BouncingScrollPhysics(),
           children: [
             Container(
               height: 150,
@@ -340,52 +283,9 @@ class home_page extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 3),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  "Herbs Seasonings".text.size(18).gray900.make(),
-                  "View all".text.size(15).gray600.make(),
-                ],
-              ),
-            ),
-            SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  singalProduct(),
-                  singalProduct(),
-                  singalProduct(),
-                  singalProduct(),
-                  singalProduct(),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 3),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  "Fresh Fruits".text.size(18).gray900.make(),
-                  "View all".text.size(15).gray600.make(),
-                ],
-              ),
-            ),
-            SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  singalProduct(),
-                  singalProduct(),
-                  singalProduct(),
-                  singalProduct(),
-                  singalProduct(),
-                ],
-              ),
-            ),
+            _buildHerbsProduct(),
+            _buildFreshFruits(),
+            _buildRootVegetables(),
           ],
         ),
       ),
