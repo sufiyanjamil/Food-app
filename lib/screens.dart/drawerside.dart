@@ -30,14 +30,13 @@ class Drawerside extends StatelessWidget {
                 children: [
                   const CircleAvatar(
                     radius: 43,
-                    backgroundColor: Color(0xfffcbcbcb),
+                    backgroundColor: Colors.white54,
                     child: CircleAvatar(
-                      radius: 40,
-                      backgroundColor: Vx.red600,
-                      child: Image(
-                          image: NetworkImage(
+                      backgroundColor: Vx.yellow800,
+                      backgroundImage: NetworkImage(
                         "https://s3.envato.com/files/328957910/vegi_thumb.png",
-                      )),
+                      ),
+                      radius: 40,
                     ),
                   ),
                   const SizedBox(

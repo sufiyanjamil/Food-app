@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodapp/Config/config.dart';
 import 'package:foodapp/sign_in.dart';
 //import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -16,10 +17,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return /* ChangeNotifierProvider(
-      create: (context) => GoogleSignInProvider(),
-      child: */
-        MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        primaryColor: primarycolor,
+        scaffoldBackgroundColor: scaffoldbackgroundcolor,
+      ),
       debugShowCheckedModeBanner: false,
       home: signIn(),
     );
